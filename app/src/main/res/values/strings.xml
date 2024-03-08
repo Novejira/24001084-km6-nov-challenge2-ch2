@@ -4,4 +4,6 @@
     <string name="text_greetings"> Try our menu ! </string>
     <string name="text_title_banner">Welcome to TOKADA !</string>
     <string name="text_desc_banner">Homemade Products is here ! </string>
+    <string name="text_category">CATEGORY</string>
+
 </resources>
