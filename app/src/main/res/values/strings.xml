@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Suek</string>
+    <string name="text_name">Hai, Guys !</string>
+    <string name="text_greetings"> Try our menu ! </string>
 </resources>
