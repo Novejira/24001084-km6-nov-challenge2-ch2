@@ -12,4 +12,25 @@
         android:layout_width="match_parent"
         android:layout_height="56dp" />
 
+    <include
+        android:id="@+id/layout_banner"
+        layout="@layout/layout_banner"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header"/>
+
+
+    <include
+        android:id="@+id/text_category"
+        layout="@layout/text_category"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_banner"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
