@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.catnip.layoutingexample.model.Category
 import com.example.suek.R
 import com.example.suek.databinding.ActivityMainBinding
+import com.example.suek.model.Catalog
 import com.example.suek.model.CategoryAdapter
 
 /* LayoutInflater system / findViewById Approach
@@ -46,12 +47,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val adapter = CategoryAdapter()
+    private val adapter1 = CatalogAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setAction()
         setListCategory()
+        setListCatalog()
     }
 
     private fun setListCategory() {
@@ -68,6 +71,28 @@ class MainActivity : AppCompatActivity() {
             adapter = this@MainActivity.adapter
         }
         adapter.submitData(data)
+    }
+
+    private fun setListCatalog() {
+        val data = listOf(
+            Catalog(image = R.drawable.img_choco_cake, name = "Chocolate Cake", price = 50000.0),
+            Catalog(image = R.drawable.img_straw_cake, name = "Strawberry Cake", price = 50000.0),
+            Catalog(image = R.drawable.img_choco_bread, name = "Chocolate Bread", price = 10000.0),
+            Catalog(image = R.drawable.img_straw_bread, name = "Strawberry Bread", price = 10000.0),
+            Catalog(image = R.drawable.img_choco_cookies, name = "Chocolate Cookies", price = 5000.0),
+            Catalog(image = R.drawable.img_ginger_cookies, name = "Ginger Cookies", price = 5000.0),
+            Catalog(image = R.drawable.img_choco_pudding, name = "Chocolate Pudding", price = 10000.0),
+            Catalog(image = R.drawable.img_straw_pudding, name = "Strawberry Pudding", price = 10000.0),
+            Catalog(image = R.drawable.img_straw_juice, name = "Strawberry Juice", price = 15000.0),
+            Catalog(image = R.drawable.img_orange_juice, name = "Orange Juice", price = 15000.0),
+            Catalog(image = R.drawable.img_potato_chips, name = "Potato Chips", price = 10000.0),
+            Catalog(image = R.drawable.img_spicy_chips, name = "Spicy Chips", price = 10000.0)
+
+        )
+        binding.rvCatalog.apply {
+            adapter = this@MainActivity.adapter1
+        }
+        adapter1.submitData(data)
     }
 
     private fun setAction() {
