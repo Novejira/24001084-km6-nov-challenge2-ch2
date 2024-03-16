@@ -1,4 +1,4 @@
-package feature.model
+package feature.detail.model
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
