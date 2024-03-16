@@ -26,14 +26,15 @@
         app:layout_constraintTop_toBottomOf="@id/layout_header" />
 
     <include
-        android:id="@+id/text_category"
-        layout="@layout/text_category"
+        android:id="@+id/searchbar"
+        layout="@layout/searchbar"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_banner"/>
+        app:layout_constraintTop_toBottomOf="@id/layout_banner"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_category"
@@ -43,7 +44,7 @@
         android:layout_marginHorizontal="8dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/text_category"
+        app:layout_constraintTop_toBottomOf="@id/searchbar"
         tools:listitem="@layout/item_category" />
 
     <include
