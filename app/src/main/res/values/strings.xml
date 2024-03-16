@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Suek</string>
-    <string name="text_name">Hai, Guys !</string>
+    <string name="text_name">Home</string>
     <string name="text_greetings"> Try our menu ! </string>
     <string name="text_title_banner">Welcome to TOKADA !</string>
     <string name="text_desc_banner">Homemade Products is here ! </string>

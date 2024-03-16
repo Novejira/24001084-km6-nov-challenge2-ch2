@@ -1,13 +1,14 @@
-package com.catnip.layoutingexample
+package feature.main
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.catnip.layoutingexample.model.Category
+import com.example.Suek.CatalogAdapter
+import com.example.Suek.model.Category
 import com.example.suek.R
 import com.example.suek.databinding.ActivityMainBinding
-import com.example.suek.model.Catalog
-import com.example.suek.model.CategoryAdapter
+import feature.model.Catalog
+import feature.model.CategoryAdapter
 
 /* LayoutInflater system / findViewById Approach
 
