@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">Suek</string>
     <string name="text_name">Home</string>
-    <string name="text_greetings"> Try our menu ! </string>
-    <string name="text_title_banner">Welcome to TOKADA !</string>
-    <string name="text_desc_banner">Homemade Products is here ! </string>
+    <string name="text_title_banner">Diskon 100%</string>
+    <string name="text_desc_banner">If you are Swifties ...</string>
     <string name="text_category">CATEGORY</string>
     <string name="text_list_menu_available">LIST MENU AVAILABLE</string>
 

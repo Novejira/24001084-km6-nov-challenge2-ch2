@@ -19,12 +19,11 @@
         android:id="@+id/layout_banner"
         layout="@layout/layout_banner"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="100dp"
         android:layout_margin="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_header"/>
-
+        app:layout_constraintTop_toBottomOf="@id/layout_header" />
 
     <include
         android:id="@+id/text_category"
