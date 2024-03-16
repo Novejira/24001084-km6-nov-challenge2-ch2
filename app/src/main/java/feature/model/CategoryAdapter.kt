@@ -1,4 +1,4 @@
-package com.example.suek.model
+package feature.model
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
