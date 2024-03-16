@@ -3,12 +3,11 @@ package feature.main
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.Suek.CatalogAdapter
-import com.example.Suek.model.Category
+import feature.model.Category
 import com.example.suek.R
 import com.example.suek.databinding.ActivityMainBinding
+import feature.detail.model.CategoryAdapter
 import feature.model.Catalog
-import feature.model.CategoryAdapter
 
 /* LayoutInflater system / findViewById Approach
 
@@ -60,12 +59,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListCategory() {
         val data = listOf(
-            Category(image = R.drawable.img_pudding, name = "Pudding"),
-            Category(image = R.drawable.img_bread, name = "Bread"),
-            Category(image = R.drawable.img_cake, name = "Cake"),
-            Category(image = R.drawable.img_chips, name = "Chips"),
-            Category(image = R.drawable.img_cookies, name = "Cookies"),
-            Category(image = R.drawable.img_juice, name = "Juice")
+            Category(image = R.drawable.img_ic_noodle, name = "Noodle"),
+            Category(image = R.drawable.img_ic_bread, name = "Bread"),
+            Category(image = R.drawable.img_ic_drink, name = "Drink")
 
         )
         binding.rvCategory.apply {
@@ -80,10 +76,22 @@ class MainActivity : AppCompatActivity() {
             Catalog(image = R.drawable.img_straw_cake, name = "Strawberry Cake", price = 50000.0),
             Catalog(image = R.drawable.img_choco_bread, name = "Chocolate Bread", price = 10000.0),
             Catalog(image = R.drawable.img_straw_bread, name = "Strawberry Bread", price = 10000.0),
-            Catalog(image = R.drawable.img_choco_cookies, name = "Chocolate Cookies", price = 5000.0),
+            Catalog(
+                image = R.drawable.img_choco_cookies,
+                name = "Chocolate Cookies",
+                price = 5000.0
+            ),
             Catalog(image = R.drawable.img_ginger_cookies, name = "Ginger Cookies", price = 5000.0),
-            Catalog(image = R.drawable.img_choco_pudding, name = "Chocolate Pudding", price = 10000.0),
-            Catalog(image = R.drawable.img_straw_pudding, name = "Strawberry Pudding", price = 10000.0),
+            Catalog(
+                image = R.drawable.img_choco_pudding,
+                name = "Chocolate Pudding",
+                price = 10000.0
+            ),
+            Catalog(
+                image = R.drawable.img_straw_pudding,
+                name = "Strawberry Pudding",
+                price = 10000.0
+            ),
             Catalog(image = R.drawable.img_straw_juice, name = "Strawberry Juice", price = 15000.0),
             Catalog(image = R.drawable.img_orange_juice, name = "Orange Juice", price = 15000.0),
             Catalog(image = R.drawable.img_potato_chips, name = "Potato Chips", price = 10000.0),
@@ -100,17 +108,9 @@ class MainActivity : AppCompatActivity() {
         binding.layoutHeader.ivProfile.setOnClickListener {
             Toast.makeText(this@MainActivity, "Aku manusia dan sudah login ", Toast.LENGTH_SHORT)
                 .show()
-
-            binding.layoutHeader.ivCart.setOnClickListener {
-                Toast.makeText(
-                    this@MainActivity,
-                    "Langsung beli , di jamin nagih ",
-                    Toast.LENGTH_SHORT
-                ).show()
-
-                binding.layoutHeader.tvName.text = "Hai, Guys !"
-            }
+            binding.layoutHeader.tvName.text = "Home"
         }
     }
 }
+
 

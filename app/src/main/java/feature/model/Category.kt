@@ -1,4 +1,4 @@
-package com.catnip.layoutingexample.model
+package feature.model
 
 import androidx.annotation.DrawableRes
 import java.util.UUID
