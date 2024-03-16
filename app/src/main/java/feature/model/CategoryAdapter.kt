@@ -1,9 +1,8 @@
-package feature.detail.model
+package feature.model
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.catnip.layoutingexample.model.Category
 import com.example.suek.databinding.ItemCategoryBinding
 
 class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>() {

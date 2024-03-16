@@ -3,11 +3,12 @@ package feature.main
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import feature.model.Category
 import com.example.suek.R
 import com.example.suek.databinding.ActivityMainBinding
-import feature.detail.model.CategoryAdapter
 import feature.model.Catalog
+import feature.model.CatalogAdapter
+import feature.model.Category
+import feature.model.CategoryAdapter
 
 /* LayoutInflater system / findViewById Approach
 
@@ -71,37 +72,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setListCatalog() {
-        val data = listOf(
-            Catalog(image = R.drawable.img_choco_cake, name = "Chocolate Cake", price = 50000.0),
-            Catalog(image = R.drawable.img_straw_cake, name = "Strawberry Cake", price = 50000.0),
-            Catalog(image = R.drawable.img_choco_bread, name = "Chocolate Bread", price = 10000.0),
-            Catalog(image = R.drawable.img_straw_bread, name = "Strawberry Bread", price = 10000.0),
-            Catalog(
-                image = R.drawable.img_choco_cookies,
-                name = "Chocolate Cookies",
-                price = 5000.0
-            ),
-            Catalog(image = R.drawable.img_ginger_cookies, name = "Ginger Cookies", price = 5000.0),
-            Catalog(
-                image = R.drawable.img_choco_pudding,
-                name = "Chocolate Pudding",
-                price = 10000.0
-            ),
-            Catalog(
-                image = R.drawable.img_straw_pudding,
-                name = "Strawberry Pudding",
-                price = 10000.0
-            ),
-            Catalog(image = R.drawable.img_straw_juice, name = "Strawberry Juice", price = 15000.0),
-            Catalog(image = R.drawable.img_orange_juice, name = "Orange Juice", price = 15000.0),
-            Catalog(image = R.drawable.img_potato_chips, name = "Potato Chips", price = 10000.0),
-            Catalog(image = R.drawable.img_spicy_chips, name = "Spicy Chips", price = 10000.0)
-
+        val data1 = listOf(
+            Catalog(image = R.drawable.img_boba, name = "Boba", formattedPrice = "Rp 15.000"),
+            Catalog(image = R.drawable.img_rotio, name = "Roti O", formattedPrice = "Rp 18.000"),
+            Catalog(image = R.drawable.img_mieayam, name = "Mie Ayam", formattedPrice = "Rp 12.000"),
         )
         binding.rvCatalog.apply {
             adapter = this@MainActivity.adapter1
         }
-        adapter1.submitData(data)
+        adapter1.submitData(data1)
     }
 
     private fun setAction() {

@@ -1,10 +1,9 @@
-package com.catnip.layoutingexample
+package feature.model
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.suek.databinding.ItemCatalogBinding
-import feature.model.Catalog
 
 class CatalogAdapter : RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder>() {
 
@@ -36,9 +35,8 @@ class CatalogAdapter : RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder>() 
         fun bind(item: Catalog) {
             binding.tvCatalogName.text = item.name
             binding.ivCatalogImage.setImageResource(item.image)
-            binding.tvCatalogPrice.text = item.price.toString()
+            binding.tvCatalogPrice.text = item.formattedPrice.toString()
         }
     }
 }
-
 
