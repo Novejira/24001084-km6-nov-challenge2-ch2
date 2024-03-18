@@ -5,10 +5,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.suek.R
 import com.example.suek.databinding.ActivityMainBinding
-import feature.model.Catalog
-import feature.model.CatalogAdapter
+import feature.adapter.CatalogAdapter
+import feature.adapter.CategoryAdapter
 import feature.model.Category
-import feature.model.CategoryAdapter
 
 /* LayoutInflater system / findViewById Approach
 
@@ -55,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setAction()
         setListCategory()
-        setListCatalog()
+        /*setListCatalog()*/
     }
 
     private fun setListCategory() {
@@ -71,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         adapter.submitData(data)
     }
 
-    private fun setListCatalog() {
+    /*private fun setListCatalog() {
         val data1 = listOf(
             Catalog(image = R.drawable.img_boba, name = "Boba", formattedPrice = "Rp 15.000"),
             Catalog(image = R.drawable.img_rotio, name = "Roti O", formattedPrice = "Rp 18.000"),
@@ -81,7 +80,7 @@ class MainActivity : AppCompatActivity() {
             adapter = this@MainActivity.adapter1
         }
         adapter1.submitData(data1)
-    }
+    }*/
 
     private fun setAction() {
         binding.layoutHeader.ivProfile.setOnClickListener {
