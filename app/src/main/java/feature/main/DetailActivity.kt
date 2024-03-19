@@ -43,6 +43,7 @@ class DetailActivity : AppCompatActivity() {
         binding.tvFoodPrice.text = catalog.formattedPrice
         binding.tvFoodDesc.text = catalog.foodDesc
         binding.tvLoca.text = catalog.locaDesc
+
     }
 
     private fun setProfileImage(imgResDrawable: Int?) {

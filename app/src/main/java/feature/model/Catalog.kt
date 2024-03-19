@@ -1,13 +1,16 @@
 package feature.model
 
+import android.os.Parcelable
 import androidx.annotation.DrawableRes
-import java.util.UUID
+import kotlinx.parcelize.Parcelize
 
 
+@Parcelize
 data class Catalog(
-    var id: String = UUID.randomUUID().toString(),
+    var name : String,
     @DrawableRes
     var image: Int,
-    var name: String,
+    var foodDesc: String,
     val formattedPrice: String,
-)
+    val locaDesc:String
+): Parcelable
