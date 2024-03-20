@@ -27,15 +27,6 @@ class FoodDataSourceImpl() : FoodDataSource {
                 locaDesc = "Jl. Ruko Anggrek 1 No.18 Blok C1, Tirtajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412"
 
             ),
-            Catalog(
-                name = "Roti O",
-                formattedPrice = "Rp 18.000",
-                image = R.drawable.img_rotio,
-                foodDesc = "O",
-                nameloca = "",
-                locaDesc = "Jl. Raya Abdul Gani No.17, Kalibaru, Kec. Cilodong, Kota Depok, Jawa Barat 16413"
-
-            )
         )
     }
 }

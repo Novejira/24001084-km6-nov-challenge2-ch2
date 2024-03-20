@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
     private fun setListCategory() {
         val data = listOf(
             Category(image = R.drawable.img_ic_noodle, name = "Noodle"),
-            Category(image = R.drawable.img_ic_bread, name = "Bread"),
             Category(image = R.drawable.img_ic_drink, name = "Drink")
         )
         binding.rvCategory.apply {
