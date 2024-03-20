@@ -8,10 +8,10 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Catalog(
     var name : String,
-    var nameloca: String,
     @DrawableRes
     var image: Int,
     var foodDesc: String,
     val formattedPrice: String,
-    val locaDesc:String
+    val addres :String,
+    val mapURL : String
 ): Parcelable
