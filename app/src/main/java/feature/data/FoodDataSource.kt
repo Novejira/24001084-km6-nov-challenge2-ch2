@@ -1,28 +1,40 @@
 package com.catnip.layoutingexample.layoutingexample.data
 
-import com.catnip.layoutingexample.layoutingexample.model.Food
+import com.example.suek.R
+import feature.model.Catalog
 
 interface FoodDataSource {
-    fun getFoodMembers(): List<Food>
+    fun getFoodMembers(): List<Catalog>
 }
 
 class FoodDataSourceImpl() : FoodDataSource {
-    override fun getFoodMembers(): List<Food> {
+    override fun getFoodMembers(): List<Catalog> {
         return mutableListOf(
-            Food(
+            Catalog(
                 name = "Mie Ayam",
-                price = "Rp 12.000",
-                pictUrl = "https://www.unileverfoodsolutions.co.id/dam/global-ufs/mcos/SEA/calcmenu/recipes/ID-recipes/pasta-dishes/chili-oil-chicken-bakmie/Bakmi%20Ayam1260x700.jpg"
+                formattedPrice = "Rp 12.000",
+                image = R.drawable.img_mieayam,
+                foodDesc = "Mie" ,
+                nameloca = "",
+                locaDesc = "Gg. Hj Senin No.06, RW.09, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412"
             ),
-            Food(
+            Catalog(
                 name = "Boba",
-                price = "Rp 15.000",
-                pictUrl = "https://i.pinimg.com/originals/96/45/b6/9645b6eea8d4f8f68440120699e918d2.jpg"
+                formattedPrice = "Rp 15.000",
+                image = R.drawable.img_boba,
+                foodDesc = "Bulat",
+                nameloca = "",
+                locaDesc = "Jl. Ruko Anggrek 1 No.18 Blok C1, Tirtajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412"
+
             ),
-            Food(
+            Catalog(
                 name = "Roti O",
-                price = "Rp 18.000",
-                pictUrl = "https://doyanresep.com/wp-content/uploads/2019/11/resep-roti-boy.jpg"
+                formattedPrice = "Rp 18.000",
+                image = R.drawable.img_rotio,
+                foodDesc = "O",
+                nameloca = "",
+                locaDesc = "Jl. Raya Abdul Gani No.17, Kalibaru, Kec. Cilodong, Kota Depok, Jawa Barat 16413"
+
             )
         )
     }

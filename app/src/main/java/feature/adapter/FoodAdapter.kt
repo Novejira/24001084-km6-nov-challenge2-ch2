@@ -5,15 +5,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.catnip.layoutingexample.layoutingexample.model.Food
 import com.catnip.layoutingexample.presentation.foodlist.adapter.adapter.FoodGridItemViewHolder
 import com.catnip.layoutingexample.presentation.foodlist.adapter.adapter.FoodListItemViewHolder
 import com.example.suek.databinding.ItemFoodGridBinding
 import com.example.suek.databinding.ItemFoodListBinding
 import feature.base.ViewHolderBinder
+import feature.model.Catalog
 
 class FoodAdapter(
-    private val listener: OnItemClickedListener<Food>,
+    private val listener: OnItemClickedListener<Catalog>,
     private val listMode: Int = MODE_LIST
 ) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -24,13 +24,13 @@ class FoodAdapter(
     }
 
     private var asyncDataDiffer = AsyncListDiffer(
-        this, object : DiffUtil.ItemCallback<Food>() {
-            override fun areItemsTheSame(oldItem: Food, newItem: Food): Boolean {
+        this, object : DiffUtil.ItemCallback<Catalog>() {
+            override fun areItemsTheSame(oldItem: Catalog, newItem: Catalog): Boolean {
                 //membandingkan apakah item tersebut sama
                 return oldItem.name == newItem.name
             }
 
-            override fun areContentsTheSame(oldItem: Food, newItem: Food): Boolean {
+            override fun areContentsTheSame(oldItem: Catalog, newItem: Catalog): Boolean {
                 // yang dibandingkan adalah kontennya
                 return oldItem.hashCode() == newItem.hashCode()
             }
@@ -38,7 +38,7 @@ class FoodAdapter(
         }
     )
 
-    fun submitData(data: List<Food>) {
+    fun submitData(data: List<Catalog>) {
         asyncDataDiffer.submitList(data)
     }
 
@@ -65,7 +65,7 @@ class FoodAdapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder !is ViewHolderBinder<*>) return
-        (holder as ViewHolderBinder<Food>).bind(asyncDataDiffer.currentList[position])
+        (holder as ViewHolderBinder<Catalog>).bind(asyncDataDiffer.currentList[position])
     }
 }
 

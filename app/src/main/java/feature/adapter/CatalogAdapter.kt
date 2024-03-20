@@ -8,6 +8,8 @@ import feature.model.Catalog
 
 class CatalogAdapter : RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder>() {
 
+
+
     private val data = mutableListOf<Catalog>()
 
     fun submitData(items: List<Catalog>) {
@@ -40,4 +42,5 @@ class CatalogAdapter : RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder>() 
         }
     }
 }
+
 
