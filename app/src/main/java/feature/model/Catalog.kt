@@ -8,6 +8,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Catalog(
     var name : String,
+    var nameloca: String,
     @DrawableRes
     var image: Int,
     var foodDesc: String,

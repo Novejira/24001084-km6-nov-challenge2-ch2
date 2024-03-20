@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity() {
     private var isUsingGridMode: Boolean = false
     private val adapterCategory = CategoryAdapter()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setListCategory()
         setClickAction()
@@ -34,10 +34,9 @@ class MainActivity : AppCompatActivity() {
             Category(image = R.drawable.img_ic_noodle, name = "Noodle"),
             Category(image = R.drawable.img_ic_bread, name = "Bread"),
             Category(image = R.drawable.img_ic_drink, name = "Drink")
-
         )
         binding.rvCategory.apply {
-            adapter = this@MainActivity.adapter
+            adapter = adapterCategory
         }
         adapterCategory.submitData(data)
     }
@@ -54,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         val textResId = if (usingGridMode) R.string.text_list_mode else R.string.text_grid_mode
         binding.btnChangeListMode.setText(textResId)
     }
-
 
     private fun bindFoodList(isUsingGrid: Boolean) {
         val listMode = if (isUsingGrid) FoodAdapter.MODE_GRID else FoodAdapter.MODE_LIST
@@ -77,11 +75,13 @@ class MainActivity : AppCompatActivity() {
         DetailActivity.startActivity(this,
             Catalog(
                 name = "Boba",
+                nameloca = "Location",
                 R.drawable.img_boba,
                 foodDesc = "Bulat",
                 formattedPrice = "Rp15.000",
-                locaDesc = "Jl. Ruko Anggrek 1 No.18 Blok C1, Tirtajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412"
-            ))
+                locaDesc = "Jl. Ruko Anggrek 1 No.18 Blok C1, Tirtajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412",
+            )
+        )
     }
 
 }

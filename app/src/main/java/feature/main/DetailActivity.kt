@@ -17,6 +17,7 @@ class DetailActivity : AppCompatActivity() {
             context.startActivity(intent)
         }
 
+
     }
 
     private val binding: ActivityDetailBinding by lazy {
@@ -32,22 +33,25 @@ class DetailActivity : AppCompatActivity() {
     private fun getIntentData() {
         //receive data
         intent.extras?.getParcelable<Catalog>(EXTRAS_DETAIL_DATA)?.let {
-            setProfileImage(it.image)
-            setProfileData(it)
+            setFoodImage(it.image)
+            setFoodData(it)
+
         }
 
     }
 
-    private fun setProfileData(catalog: Catalog) {
+    private fun setFoodData(catalog: Catalog) {
         binding.tvName.text = catalog.name
         binding.tvFoodPrice.text = catalog.formattedPrice
         binding.tvFoodDesc.text = catalog.foodDesc
         binding.tvLoca.text = catalog.locaDesc
+        binding.tvTextLocation.text = catalog.nameloca
 
     }
 
-    private fun setProfileImage(imgResDrawable: Int?) {
-        imgResDrawable?.let { binding.ivProfile.setImageResource(it) }
-
+    private fun setFoodImage(imgResDrawable: Int?) {
+        imgResDrawable?.let {
+            binding.ivPhotoFood.setImageResource(it)
+        }
     }
 }
