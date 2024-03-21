@@ -12,6 +12,7 @@ import com.example.suek.databinding.ActivityMainBinding
 import feature.adapter.CategoryAdapter
 import feature.model.Catalog
 import feature.model.Category
+import feature.model.Food2
 
 class MainActivity : AppCompatActivity() {
 
@@ -60,8 +61,7 @@ class MainActivity : AppCompatActivity() {
             listener = object : OnItemClickedListener<Catalog> {
                 override fun onItemClicked(item: Catalog) {
                     //navigate to detail
-                    navigateToFood(item)
-                    navigateToMieAyam(item)
+                        navigateToFood(item)
                 }
             })
         binding.rvFoodList.apply {
@@ -81,21 +81,19 @@ class MainActivity : AppCompatActivity() {
                 addres = "Jl. Ruko Anggrek 1 No.18 Blok C1, Tirtajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412",
                 mapURL = "https://maps.app.goo.gl/h4wQKqaBuXzftGK77"
             ),
+            Food2(
+                    name = "Mie ayam",
+                    R.drawable.img_mieayam,
+                    foodDesc = "Mie campur ayam ",
+                    formattedPrice = "Rp12.000",
+                    addres = "deket kampus",
+                    mapURL = "https://maps.app.goo.gl/h4wQKqaBuXzftGK77"
+                ),
 
-        )
+            )
+
     }
-    private fun navigateToMieAyam (item: Catalog){
-        DetailActivity.startActivity(this,
-            Catalog(
-                name = "MieAyam",
-                R.drawable.img_mieayam,
-                foodDesc = "Mie tambah ayam ",
-                formattedPrice = "Rp12.000",
-                addres = "Jl. Ruko Anggrek 1 No.18 Blok C1, Tirtajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412",
-                mapURL = "https://maps.app.goo.gl/h4wQKqaBuXzftGK77"
-            ),
-        )
-    }
+
 }
 
 

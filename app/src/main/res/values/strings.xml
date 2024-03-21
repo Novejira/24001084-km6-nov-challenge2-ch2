@@ -6,5 +6,6 @@
     <string name="text_grid_mode">Grid Mode</string>
     <string name="text_list_mode">List Mode</string>
     <string name="text_list_menu_available">List Menu Available</string>
+    <string name="text_location">Location</string>
 
 </resources>
